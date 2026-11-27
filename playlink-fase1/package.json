@@ -1,0 +1,25 @@
+{
+  "name": "playlink",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma web para encontrar jogadores e formar equipes",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "db:setup": "node src/setup.js",
+    "test": "node test/api.mjs",
+    "test:sql": "node sql/testar.mjs",
+    "test:site": "node test/site.mjs",
+    "test:all": "npm run test:sql && npm test && npm run test:site"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15",
+    "playwright": "^1.51.1"
+  }
+}
